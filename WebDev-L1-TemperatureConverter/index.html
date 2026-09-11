@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempora | Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header>
+            <div class="logo">Tempora<span>°</span></div>
+            <p>Temperature Converter</p>
+        </header>
+
+        <section class="hero">
+            <div class="badge">✦ PRECISION CONVERSION</div>
+
+            <h1>Convert temperature.<br>
+                <span>Instantly.</span>
+            </h1>
+
+            <p>
+                Convert between Celsius, Fahrenheit and Kelvin
+                with accurate results in seconds.
+            </p>
+        </section>
+
+        <section class="converter">
+
+            <div class="input-area">
+                <label for="temperatureInput">ENTER TEMPERATURE</label>
+
+                <div class="input-row">
+                    <input
+                        type="number"
+                        id="temperatureInput"
+                        placeholder="Enter value"
+                        step="any"
+                    >
+
+                    <select id="unitSelect">
+                        <option value="C">Celsius °C</option>
+                        <option value="F">Fahrenheit °F</option>
+                        <option value="K">Kelvin K</option>
+                    </select>
+                </div>
+
+                <p id="errorMessage"></p>
+
+                <button id="convertBtn">
+                    Convert Temperature →
+                </button>
+            </div>
+
+            <div class="results">
+
+                <div class="result">
+                    <div>
+                        <h3>Celsius</h3>
+                        <span>°C</span>
+                    </div>
+                    <strong id="celsiusResult">—</strong>
+                </div>
+
+                <div class="result">
+                    <div>
+                        <h3>Fahrenheit</h3>
+                        <span>°F</span>
+                    </div>
+                    <strong id="fahrenheitResult">—</strong>
+                </div>
+
+                <div class="result">
+                    <div>
+                        <h3>Kelvin</h3>
+                        <span>K</span>
+                    </div>
+                    <strong id="kelvinResult">—</strong>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="info">
+
+            <div>
+                <b>°C</b>
+                <h3>Celsius</h3>
+                <p>Water freezes at 0°C and boils at 100°C.</p>
+            </div>
+
+            <div>
+                <b>°F</b>
+                <h3>Fahrenheit</h3>
+                <p>Water freezes at 32°F and boils at 212°F.</p>
+            </div>
+
+            <div>
+                <b>K</b>
+                <h3>Kelvin</h3>
+                <p>Absolute zero is 0 Kelvin.</p>
+            </div>
+
+        </section>
+
+        <footer>
+            Tempora © 2026 · Built with HTML, CSS & JavaScript
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
