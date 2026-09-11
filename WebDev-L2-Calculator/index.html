@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calcura — Smart Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <main class="page">
+
+        <header>
+            <div class="brand">
+                <div class="brand-icon">+</div>
+                <div>
+                    <h2>Calcura</h2>
+                    <span>Smart Calculator</span>
+                </div>
+            </div>
+
+            <div class="live-status">
+                <span></span>
+                READY
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="badge">LEVEL 2 · TASK 1</div>
+
+            <h1>
+                Calculate with
+                <span>clarity.</span>
+            </h1>
+
+            <p>
+                A clean and responsive calculator designed for
+                fast, accurate everyday calculations.
+            </p>
+        </section>
+
+        <section class="calculator">
+
+            <div class="display">
+
+                <div id="expression" class="expression"></div>
+
+                <div id="display" class="display-value">0</div>
+
+            </div>
+
+            <div id="keypad" class="keypad">
+
+                <button class="key action" data-action="clear">AC</button>
+                <button class="key action" data-action="backspace">⌫</button>
+                <button class="key operator" data-operator="%">%</button>
+                <button class="key operator" data-operator="/">÷</button>
+
+                <button class="key number" data-number="7">7</button>
+                <button class="key number" data-number="8">8</button>
+                <button class="key number" data-number="9">9</button>
+                <button class="key operator" data-operator="*">×</button>
+
+                <button class="key number" data-number="4">4</button>
+                <button class="key number" data-number="5">5</button>
+                <button class="key number" data-number="6">6</button>
+                <button class="key operator" data-operator="-">−</button>
+
+                <button class="key number" data-number="1">1</button>
+                <button class="key number" data-number="2">2</button>
+                <button class="key number" data-number="3">3</button>
+                <button class="key operator" data-operator="+">+</button>
+
+                <button class="key number zero" data-number="0">0</button>
+                <button class="key number" data-number=".">.</button>
+                <button class="key equals" data-action="equals">=</button>
+
+            </div>
+
+            <div class="tip">
+                <span>⌨</span>
+                Tip: Use your keyboard for faster calculations
+            </div>
+
+        </section>
+
+        <footer>
+            Calcura © 2026 · Built with HTML, CSS & JavaScript
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
