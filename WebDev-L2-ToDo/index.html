@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusList — To-Do Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+                <div class="brand">
+                    <span class="brand-mark">✓</span>
+                    FocusList
+                </div>
+
+                <p class="tagline">
+                    Organize your day. One task at a time.
+                </p>
+            </div>
+
+            <div class="date-box">
+                <span id="currentDate">Today</span>
+            </div>
+
+        </header>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-label">TOTAL</span>
+                <strong id="totalCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">PENDING</span>
+                <strong id="pendingCount">0</strong>
+            </div>
+
+            <div class="stat-card completed-stat">
+                <span class="stat-label">COMPLETED</span>
+                <strong id="completedCount">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- ADD TASK -->
+
+        <section class="add-section">
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    maxlength="120"
+                    autocomplete="off"
+                >
+
+                <button id="addTaskBtn">
+                    + Add Task
+                </button>
+
+            </div>
+
+            <p id="inputError" class="input-error"></p>
+
+        </section>
+
+
+        <!-- TASK AREA -->
+
+        <main class="task-area">
+
+            <!-- PENDING -->
+
+            <section class="task-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-kicker">IN PROGRESS</span>
+                        <h2>Pending Tasks</h2>
+                    </div>
+
+                    <span class="section-count" id="pendingBadge">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div id="pendingList" class="task-list">
+
+                    <div class="empty-state" id="pendingEmpty">
+
+                        <div class="empty-icon">○</div>
+
+                        <h3>No pending tasks</h3>
+
+                        <p>
+                            Add a task above and start getting things done.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- COMPLETED -->
+
+            <section class="task-section completed-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-kicker">DONE</span>
+                        <h2>Completed Tasks</h2>
+                    </div>
+
+                    <span class="section-count completed-badge" id="completedBadge">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div id="completedList" class="task-list">
+
+                    <div class="empty-state" id="completedEmpty">
+
+                        <div class="empty-icon">✓</div>
+
+                        <h3>Nothing completed yet</h3>
+
+                        <p>
+                            Completed tasks will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+            <span>FOCUSLIST</span>
+            <span>Your tasks are saved automatically.</span>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
