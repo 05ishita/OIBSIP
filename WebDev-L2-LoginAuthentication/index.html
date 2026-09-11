@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusAuth | Secure Authentication</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- LEFT BRAND PANEL -->
+        <aside class="brand-panel">
+
+            <div class="brand">
+                <div class="brand-icon">F</div>
+
+                <span>FocusAuth</span>
+            </div>
+
+            <div class="brand-content">
+
+                <span class="eyebrow">
+                    SECURE ACCESS
+                </span>
+
+                <h1>
+                    Your workspace.
+                    <span>Your access.</span>
+                </h1>
+
+                <p>
+                    A clean and secure authentication experience designed
+                    for modern web applications.
+                </p>
+
+                <div class="security-points">
+
+                    <div class="security-item">
+                        <div class="security-icon">✓</div>
+                        <div>
+                            <strong>Protected credentials</strong>
+                            <small>Passwords are securely hashed.</small>
+                        </div>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">✓</div>
+                        <div>
+                            <strong>Private sessions</strong>
+                            <small>Dashboard access requires authentication.</small>
+                        </div>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">✓</div>
+                        <div>
+                            <strong>Simple & responsive</strong>
+                            <small>Works smoothly across devices.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="brand-footer">
+                <span>© 2026 FocusAuth</span>
+                <span>Secure Demo</span>
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT CONTENT -->
+        <main class="main-panel">
+
+            <!-- AUTH CONTAINER -->
+            <section id="authSection" class="auth-container">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">F</div>
+                    <span>FocusAuth</span>
+                </div>
+
+                <div class="auth-heading">
+
+                    <span class="eyebrow">
+                        WELCOME
+                    </span>
+
+                    <h2 id="authTitle">
+                        Welcome back
+                    </h2>
+
+                    <p id="authSubtitle">
+                        Sign in to continue to your workspace.
+                    </p>
+
+                </div>
+
+
+                <!-- TABS -->
+                <div class="auth-tabs">
+
+                    <button
+                        type="button"
+                        class="tab active"
+                        id="loginTab"
+                    >
+                        Sign In
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tab"
+                        id="registerTab"
+                    >
+                        Create Account
+                    </button>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="message"
+                    class="message"
+                    role="alert"
+                ></div>
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form">
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <span class="password-note">
+                                Secure login
+                            </span>
+
+                        </div>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="loginPassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Sign In
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- REGISTER FORM -->
+                <form
+                    id="registerForm"
+                    class="auth-form hidden"
+                >
+
+                    <div class="form-group">
+
+                        <label for="registerUsername">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerUsername"
+                            placeholder="Choose a username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                placeholder="Create a strong password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="registerPassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <div class="password-rules">
+
+                            <span id="lengthRule">
+                                ● 8+ characters
+                            </span>
+
+                            <span id="numberRule">
+                                ● At least 1 number
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <p class="demo-note">
+                    Demo authentication system for OIBSIP Level 2 Task 4.
+                </p>
+
+            </section>
+
+
+            <!-- DASHBOARD -->
+            <section
+                id="dashboardSection"
+                class="dashboard hidden"
+            >
+
+                <div class="dashboard-top">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            AUTHENTICATED
+                        </span>
+
+                        <h2>
+                            Welcome to your workspace.
+                        </h2>
+
+                        <p>
+                            Your account has been successfully authenticated.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="logoutBtn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-avatar" id="dashboardAvatar">
+                        U
+                    </div>
+
+                    <div>
+
+                        <span class="card-label">
+                            SIGNED IN AS
+                        </span>
+
+                        <h3 id="dashboardUsername">
+                            User
+                        </h3>
+
+                        <p id="dashboardEmail">
+                            user@example.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Authentication
+                        </h3>
+
+                        <p>
+                            Your login session is currently active.
+                        </p>
+
+                        <span class="status-badge">
+                            Active
+                        </span>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+                            #
+                        </div>
+
+                        <h3>
+                            Password Security
+                        </h3>
+
+                        <p>
+                            Your password is stored as a SHA-256 hash.
+                        </p>
+
+                        <span class="status-badge">
+                            Protected
+                        </span>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <div class="info-icon">
+                            →
+                        </div>
+
+                        <h3>
+                            Protected Route
+                        </h3>
+
+                        <p>
+                            This dashboard is available only after login.
+                        </p>
+
+                        <span class="status-badge">
+                            Verified
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
